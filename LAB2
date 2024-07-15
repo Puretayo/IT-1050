@@ -1,0 +1,138 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    // 1. Author = [Oluwatayo Osodein]
+    // 2. .four basic elements of the counter-controlled repetition
+    // Initialization sets the initial value of the counter variable.
+    // Test involves the evaluation of a particular condition which involves the control variable to be able to determine whether the loop body is to be executed.
+    // Increments or decrements the control variable should be modified after each iteration.
+    // Looped body is the set of instructions which are meant to be executed repeatedly.
+    // 3. compare and contrast the while and for repetition statements
+    // Both while and for are used  to repeat a set of statement in programming.
+    // The while loop is used to repeat a set of statement while a particular condition is true.
+    // For loop is used to repeat a set of statement for a fixed number of times.
+    // differences between the two loops.
+    // While does not need explicit initialization. However, For does need explicit initialization.
+    // Both While and For loops check the condition before it executes the loop body
+    // 4. Save For example we intend build a program that will ensure that a user have to print the numbers from 1 to 10 and we want to ensure that it is mandatory for the user to print these numbers 1 to 10 before it can proceeed to the next page. 
+    // 
+    using System;
+
+    namespace MyApplication
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                int number;
+                do
+                {
+                    Console.Write("1,2,3,4,5,6,7,8,9,10");
+                } while (!int.TryParse(Console.ReadLine(), out number) || number < 1 || number > 10);
+
+                Console.WriteLine("You entered: " + number);
+            }
+        }
+    }
+
+
+  // The while ensures that the promptfor the input is being shown at least once. it would be said that the loop must continue so far the input being made by the user cannot be parsable to an integer or the integer is less than 1 or greater than 10.
+    // While needs an initial prompt that is seen to be outside the loop and these can be said tolead to code duplication or codes that are not needed. A do-while statement can be said to be a combination of a while loop and an if statement. A do-while loop is needed to ensure that the prompt is shown at least once. ensure that there is great execution of the code until the said condition has ben met.
+ 
+    using System;
+
+    namespace MyApplication
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                int speedLimit = 35;
+                int speed = 52;
+
+                if (speed > speedLimit)
+                {
+                    Console.WriteLine("SLOW NOW!");
+                }
+            }
+        }
+    }
+
+    
+    
+  using System;
+
+  namespace MyApplication
+  {
+      class Program
+      {
+          static void Main(string[] args)
+          {
+              int number = 1;
+
+              while (number <= 10)
+              {
+                  Console.WriteLine(10); 
+                  number++;
+              }
+
+              for (int i = 1; i <= 10; i++) 
+              {
+                  Console.WriteLine(i); 
+              }
+          }
+      }
+  }
+
+
+using System;
+
+namespace MyApplication
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number = 50;
+
+            while (number >= 5)
+            {
+                Console.WriteLine(number);
+                number -= 5;
+            }
+
+            Console.WriteLine("Program Complete");
+        }
+    }
+}
+
+
+          using System;
+
+          namespace MyApplication
+          {
+              class Program
+              {
+                  static void Main(string[] args)
+                  {
+                      int i = 10;
+                      while (i < 21)
+                      {
+                          Console.WriteLine(i);
+                          i++;
+                        }
+
+                      for (int j = 0; j < 101; j++) 
+                      {
+                          Console.WriteLine(j);
+                          Console.WriteLine("********");
+                      }
+
+                      Console.WriteLine("Program Complete"); 
+                  }
+              }
+          }
+
+
+    
