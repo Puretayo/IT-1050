@@ -16,123 +16,64 @@ class Program {
     // While does not need explicit initialization. However, For does need explicit initialization.
     // Both While and For loops check the condition before it executes the loop body
     // 4. Save For example we intend build a program that will ensure that a user have to print the numbers from 1 to 10 and we want to ensure that it is mandatory for the user to print these numbers 1 to 10 before it can proceeed to the next page. 
-    // 
-    using System;
-
-    namespace MyApplication
-    {
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                int number;
-                do
-                {
-                    Console.Write("1,2,3,4,5,6,7,8,9,10");
-                } while (!int.TryParse(Console.ReadLine(), out number) || number < 1 || number > 10);
-
-                Console.WriteLine("You entered: " + number);
-            }
-        }
-    }
 
 
   // The while ensures that the promptfor the input is being shown at least once. it would be said that the loop must continue so far the input being made by the user cannot be parsable to an integer or the integer is less than 1 or greater than 10.
     // While needs an initial prompt that is seen to be outside the loop and these can be said tolead to code duplication or codes that are not needed. A do-while statement can be said to be a combination of a while loop and an if statement. A do-while loop is needed to ensure that the prompt is shown at least once. ensure that there is great execution of the code until the said condition has ben met.
  
-    using System;
-
-    namespace MyApplication
-    {
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                int speedLimit = 35;
-                int speed = 52;
-
-                if (speed > speedLimit)
-                {
-                    Console.WriteLine("SLOW NOW!");
-                }
-            }
-        }
-    }
-
-    
-    
-  using System;
-
-  namespace MyApplication
-  {
-      class Program
-      {
-          static void Main(string[] args)
-          {
-              int number = 1;
-
-              while (number <= 10)
-              {
-                  Console.WriteLine(10); 
-                  number++;
-              }
-
-              for (int i = 1; i <= 10; i++) 
-              {
-                  Console.WriteLine(i); 
-              }
-          }
-      }
-  }
-
-
 using System;
 
-namespace MyApplication
+namespace LAB 
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int number = 50;
+            // If statement
+            int speedLimit = 35;
+            int speed = 52;
 
-            while (number >= 5)
+            if (speed > speedLimit)
             {
-                Console.WriteLine(number);
-                number -= 5;
+                Console.WriteLine("SLOW NOW!");
             }
 
-            Console.WriteLine("Program Complete");
+            // For loop to print numbers from 1 to 10
+            for (int number = 1; number <= 10; number++)
+            {
+                Console.WriteLine(number);
+            }
+
+            // While loop to print numbers from 1 to 10
+            int count = 1;
+            while (count <= 10)
+            {
+                Console.WriteLine(count);
+                count++;
+            }
+
+            // While loop to count down from 50 to 5
+            int i = 50;
+            while (i >= 5)
+            {
+                Console.WriteLine(i);
+                i -= 5;
+            }
+
+            // While loop to print numbers from 10 to 20
+            int j = 10;
+            while (j <= 20)
+            {
+                Console.WriteLine(j);
+                j++;
+            }
+
+            // For loop to print numbers from 0 to 100 with asterisks
+            for (int k = 0; k <= 100; k++)
+            {
+                Console.WriteLine(k);
+                Console.WriteLine("********");
+            }
         }
     }
 }
-
-
-          using System;
-
-          namespace MyApplication
-          {
-              class Program
-              {
-                  static void Main(string[] args)
-                  {
-                      int i = 10;
-                      while (i < 21)
-                      {
-                          Console.WriteLine(i);
-                          i++;
-                        }
-
-                      for (int j = 0; j < 101; j++) 
-                      {
-                          Console.WriteLine(j);
-                          Console.WriteLine("********");
-                      }
-
-                      Console.WriteLine("Program Complete"); 
-                  }
-              }
-          }
-
-
-    
