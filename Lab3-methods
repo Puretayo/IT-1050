@@ -1,0 +1,48 @@
+using System;
+
+// Author: Oluwatayo Osodein
+ 
+
+class Program
+{static void Main(string[] args)
+    {MyMath math = new MyMath();
+
+        
+        int addResult = math.Add(5, 3);
+        Console.WriteLine("The result of adding 5 and 3 is: " + addResult);
+
+        
+        int factorialResult = math.Factorial(5);
+        Console.WriteLine("The factorial of 5 is: " + factorialResult);
+
+        
+        int minResult = math.Min(5, 3);
+        Console.WriteLine("The minimum of 5 and 3 is: " + minResult);
+
+        
+        int multiplyResult2 = math.Multiply(5, 3);
+        Console.WriteLine("The result of multiplying 5 and 3 is: " + multiplyResult2);
+        
+        int multiplyResult3 = math.Multiply(2, 3, 4);
+        Console.WriteLine("The result of multiplying 2, 3, and 4 is: " + multiplyResult3);}}
+
+class MyMath
+{public int Add(int a, int b)
+    {return a + b;}
+
+    public int Factorial(int a)
+    {if (a == 0 || a == 1)
+        {return 1;}
+        int result = 1;
+        for (int i = 2; i <= a; i++)
+        {result *= i;}
+        return result;}
+
+    public int Min(int a, int b)
+    {return a < b ? a : b;}
+
+    public int Multiply(int a, int b)
+    {return a * b;}
+
+    public int Multiply(int a, int b, int c)
+    {return a * b * c;}}
