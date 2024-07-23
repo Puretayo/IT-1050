@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+
+public class Product
+{public string Name { get; set; }
+    public decimal Price { get; set; }
+    public int Quantity { get; set; }}
+
+public class OrderProcessor
+{private List<Product> products;
+    private decimal totalPrice;
+
+    public OrderProcessor(List<Product> products)
+    {this.products = products;
+        CalculateOrderTotal();}
+
+    private void CalculateOrderTotal()
+    {totalPrice = 0;
+
+        foreach (var product in products)
+        {totalPrice += product.Price * product.Quantity;}}
+
+    public void PrintOrderReceipt()
+    { Console.WriteLine("Order Receipt:");
+        foreach (var product in products)
+        {Console.WriteLine($"{product.Name}: {product.Quantity} x {product.Price:C} = {product.Quantity * product.Price:C}");}
+        Console.WriteLine($"Total Price: {totalPrice:C}");}}
+
+
+class Program
+{static void Main()
+    {var products = new List<Product>
+        {new Product { Name = "Mango", Price = 0.95m, Quantity = 18 },
+            new Product { Name = "Peach", Price = 0.84m, Quantity = 7 }};
+
+        var orderProcessor = new OrderProcessor(products);
+        orderProcessor.PrintOrderReceipt();}}
