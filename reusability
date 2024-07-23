@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{// Method to calculate the area of a rectangle
+    static double CalculateArea(double length, double width)
+    { return length * width; }
+
+    static void Main()
+    {// Calculate areas directly
+        double area1 = CalculateArea(5, 4);
+        double area2 = CalculateArea(10, 2);
+
+        // Output the results
+        Console.WriteLine($"Area of rectangle 1: {area1}");
+        Console.WriteLine($"Area of rectangle 2: {area2}");
+    }
+}
