@@ -1,0 +1,47 @@
+using System;
+
+// Author = Oluwatayo Osodein
+
+namespace BookExample
+{
+        public class Book
+    {
+               public string Title { get; set; }
+        public string Author { get; set; }
+        public string ISBN { get; set; }
+
+       
+        public void Display()
+        {
+            Console.WriteLine($"Title: {Title}");
+            Console.WriteLine($"Author: {Author}");
+            Console.WriteLine($"ISBN: {ISBN}");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Book book1 = new Book
+            {
+                Title = "FOA REFERENCE GUIDE TO FIBER OPTICS",
+                Author = "JIM HAYES",
+                ISBN = "978-1439253878"
+            };
+
+            Book book2 = new Book
+            {
+                Title = "THE GOOD GUY'S GUIDE TO GREAT SEX",
+                Author = "SHEILA WRAY GREGOIRE",
+                ISBN = "978-0061120084"
+            };
+
+            
+            book1.Display();
+            Console.WriteLine(); 
+            book2.Display();
+        }
+    }
+}
